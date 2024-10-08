@@ -3,6 +3,7 @@ builder.Services.AddControllersWithViews();
 var app = builder.Build();
 
 app.UseHttpsRedirection();
+app.UseStaticFiles();
 app.UseRouting();
 
 app.MapControllerRoute(
