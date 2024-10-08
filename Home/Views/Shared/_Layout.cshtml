@@ -19,7 +19,7 @@
 <body>
     <nav class="navbar navbar-expand-md bg-primary-subtle">
         <div class="container-fluid">
-            <a class="navbar-brand" href="#"><i class="bi bi-compass"></i> Northwind</a>
+            <a class="navbar-brand" asp-controller="Home" asp-action="Index"><i class="bi bi-compass"></i> Northwind</a>
             <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarScroll" aria-controls="navbarScroll" aria-expanded="false" aria-label="Toggle navigation">
             <span class="navbar-toggler-icon"></span>
             </button>
@@ -30,7 +30,7 @@
                         <i class="bi bi-database"></i> Products
                     </a>
                     <ul class="dropdown-menu">
-                        <li><a class="dropdown-item" href="#"><i class="bi bi-list"></i> Browse Categories</a></li>
+                        <li><a class="dropdown-item" asp-controller="Product" asp-action="Category"><i class="bi bi-list"></i> Browse Categories</a></li>
                         <li><a class="dropdown-item" href="#"><i class="bi bi-search"></i> Product Search</a></li>
                         <li><hr class="dropdown-divider"></li>
                         <li><a class="dropdown-item" href="#"><i class="bi bi-tags"></i> Current Discounts</a></li>
