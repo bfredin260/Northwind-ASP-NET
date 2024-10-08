@@ -20,7 +20,7 @@
                 @d.Description
             </div>
             <i>Discount expires: @d.EndTime.ToString("MM/dd/yyyy")</i><br />
-            <a href="#" data-code="@d.Code" data-title="@d.Title" class="discount"><i class="far fa-hand-point-right"></i> Discount Code</a>
+            <a href="#" data-code="@d.Code" data-product="@d.Product.ProductName" class="discount"><i class="far fa-hand-point-right"></i> Discount Code</a>
         </div>
     }
 </div>
@@ -28,7 +28,7 @@
 <div class="toast-container position-fixed bottom-0 end-0 p-3">
   <div id="liveToast" class="toast" role="alert" aria-live="assertive" aria-atomic="true">
     <div class="toast-header">
-      <strong class="me-auto" id="title">Product</strong>
+      <strong class="me-auto" id="product">Product</strong>
       <button type="button" class="btn-close" data-bs-dismiss="toast" aria-label="Close"></button>
     </div>
     <div class="toast-body">
