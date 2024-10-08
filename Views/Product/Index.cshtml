@@ -1,0 +1,21 @@
+@model IEnumerable<Product>
+
+<table class="table table-hover">
+  <thead>
+    <tr>
+      <th scope="col">Product</th>
+      <th scope="col" class="text-end">Price</th>
+      <th scope="col" class="text-end">Stock</th>
+    </tr>
+</thead>
+<tbody>
+  @foreach (Product p in Model)
+  {
+    <tr>
+      <td>@p.ProductName</td>
+      <td class="text-end">@string.Format("{0:c}", p.UnitPrice)</td>
+      <td class="text-end">@p.UnitsInStock</td>
+    </tr>
+  }
+  </tbody>
+</table>

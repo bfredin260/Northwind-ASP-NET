@@ -1,0 +1,26 @@
+@model IEnumerable<Discount>
+
+<div class="p-4 m-2 mt-4 bg-body-tertiary rounded-3 border">
+    <h1 class="display-4 fw-bold">
+        Northwind
+    </h1>
+    <p class="fs-4">
+        We have the best prices and selection of high quality foods &amp; beverages on the planet! Check out our featured discounts below.
+    </p>
+    <hr class="my-4">
+    <p class="fs-5">For exceptional international quisuine, look no further.</p>
+    <a class="btn btn-outline-primary btn-lg" href="#" role="button"><i class="bi bi-cart"></i> Order Now</a>
+</div>
+<div class="p-2 m-2 row row-cols-1 row-cols-lg-3 featured">
+    @foreach (Discount d in Model)
+    {
+        <div class="col discounts px-2 py-4">
+            <h4>@d.Title</h4>
+            <div class="mb-4">
+                @d.Description
+            </div>
+            <i>Discount expires: @d.EndTime.ToString("MM/dd/yyyy")</i><br />
+            <a href="#"><i class="far fa-hand-point-right"></i> Discount Code</a>
+        </div>
+    }
+</div>
