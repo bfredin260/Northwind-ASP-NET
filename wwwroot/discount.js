@@ -1,3 +1,3 @@
 document.addEventListener("DOMContentLoaded", function() {
-    console.log('bananas');
+    bootstrap.Toast.getOrCreateInstance(document.getElementById('liveToast')).show();
 });
