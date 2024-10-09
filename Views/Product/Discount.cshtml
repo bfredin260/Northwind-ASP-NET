@@ -4,6 +4,6 @@
 <div class="list-group">
     @foreach (Discount d in Model)
     {
-        <a asp-route-id="@d.DiscountId" class="list-group-item">@d.Title: <i style="color:green;">@d.Code</i>&nbsp;&NonBreakingSpace;| <i style="opacity:.6;color:red;">-@string.Format("{0:P2}", @d.DiscountPercent) off!</i> | Valid through: <i style="opacity:.6;">@string.Format("{0:MM/dd/yyyy hh:mm tt}", d.EndTime)</i></a>
+        <a asp-route-id="@d.DiscountId" class="list-group-item">@d.Title - <i style="color:green;">@d.Code</i>&nbsp;&NonBreakingSpace;| <i style="opacity:.6;color:red;">-@string.Format("{0:P2}", @d.DiscountPercent) off!</i> | <i style="opacity:.6;color:blue;">'@d.Description'</i> | Ends: <i style="opacity:.6;">@string.Format("{0:MM/dd/yyyy hh:mm tt}", d.EndTime)</i></a>
     }
 </div>
