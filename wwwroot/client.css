@@ -69,3 +69,7 @@ body {
 .featured {
     font-size: .9em;
 }
+.validation-summary-errors
+{
+  color: red;
+}

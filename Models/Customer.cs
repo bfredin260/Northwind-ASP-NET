@@ -1,6 +1,9 @@
+using System.ComponentModel.DataAnnotations;
 public class Customer
 {
     public int CustomerId { get; set; }
+    [Required]
+    [Display(Name = "Company Name")]
     public string CompanyName { get; set; }
     public string Address { get; set; }
     public string City { get; set; }
