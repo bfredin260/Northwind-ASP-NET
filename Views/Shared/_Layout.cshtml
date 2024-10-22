@@ -33,11 +33,18 @@
                         <li><a class="dropdown-item" asp-controller="Product" asp-action="Category"><i class="bi bi-list"></i> Browse Categories</a></li>
                         <li><a class="dropdown-item" href="#"><i class="bi bi-search"></i> Product Search</a></li>
                         <li><hr class="dropdown-divider"></li>
-                        <li><a class="dropdown-item" asp-controller="Product" asp-action="Discount"><i class="bi bi-tags"></i> Current Discounts</a></li>
+                        <li><a class="dropdown-item" href="#"><i class="bi bi-tags"></i> Current Discounts</a></li>
                     </ul>
                 </li>
-                <li class="nav-item">
-                    <a class="nav-link" href="#"><i class="bi bi-people"></i> Customers</a>
+                <li class="nav-item dropdown">
+                    <a class="nav-link dropdown-toggle" href="#" role="button" data-bs-toggle="dropdown" aria-expanded="false">
+                        <i class="bi bi-people"></i> Customers</a>
+                    </a>
+                    <ul class="dropdown-menu">
+                        <li><a class="dropdown-item" href="#"><i class="bi bi-person"></i> Account</a></li>
+                        <li><a class="dropdown-item" asp-controller="Customer" asp-action="Register"><i class="bi bi-person-add"></i> Register</a></li>
+                        <li><a class="dropdown-item" href="#"><i class="bi bi-door-open"></i> Sign in</a></li>
+                    </ul>
                 </li>
             </ul>
             <form class="d-flex" role="search">
