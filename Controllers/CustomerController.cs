@@ -12,8 +12,15 @@ public class CustomerController(DataContext db) : Controller
     {
       if (ModelState.IsValid)
       {
-        _dataContext.AddCustomer(customer);
-        return RedirectToAction("Index", "Home");
+        if (_dataContext.Customers.Any(c => c.CompanyName == customer.CompanyName))
+        {
+          ModelState.AddModelError("", "Company Name must be unique");
+        }
+        else
+        {
+          _dataContext.AddCustomer(customer);
+          return RedirectToAction("Index", "Home");
+        }
       }
       return View();
     }
