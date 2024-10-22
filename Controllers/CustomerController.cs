@@ -19,9 +19,10 @@ public class CustomerController(DataContext db) : Controller
         else
         {
           _dataContext.AddCustomer(customer);
-          return RedirectToAction("Index", "Home");
+          return RedirectToAction("Customer", "Customer");
         }
       }
       return View();
     }
+    public IActionResult Customer() => View(_dataContext.Customers.OrderBy(c => c.CustomerId));
 }

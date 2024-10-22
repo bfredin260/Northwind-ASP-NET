@@ -1,0 +1,9 @@
+@model IEnumerable<Customer>
+
+<h2 class="mt-3"><i class="fas fa-list-ul"></i>Registered Customers</h2>
+<div class="list-group">
+    @foreach (Customer c in Model)
+    {
+        <a asp-route-id="@c.CustomerId" class="list-group-item">@c.CompanyName</a>
+    }
+</div>
